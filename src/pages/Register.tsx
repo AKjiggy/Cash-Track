@@ -36,7 +36,7 @@ const Register = () => {
         }
       );
 
-      console.log("Registration successful! Token:", response.data.token);
+      console.log("Registration successful! Status:", response.status);
       navigate("/login");
     } catch (err) {
       if (axios.isAxiosError(err)) {

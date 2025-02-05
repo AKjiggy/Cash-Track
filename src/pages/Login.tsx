@@ -25,7 +25,7 @@ const Login = () => {
     setLoading(true);
     setError("");
 
-    console.log("Login Request Data:", formData); // Debugging
+    // console.log("Login Request Data:", formData); // Debugging
 
     try {
       const response = await axios.post(
@@ -38,7 +38,7 @@ const Login = () => {
         }
       );
 
-      console.log("Login successful! Token:", response.data.token);
+      // console.log("Login successful! Token:", response.data.token);
       localStorage.setItem("token", response.data.token);
       navigate("/dashboard");
     } catch (err) {
