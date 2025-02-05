@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../components/AuthLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 
@@ -9,10 +9,12 @@ const Register = () => {
     fullname: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,10 +22,41 @@ const Register = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const validatePassword = (password: string) => {
+    const minLength = 8;
+    const hasNumber = /\d/;
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+
+    if (password.length < minLength) {
+      return "Password must be at least 8 characters long.";
+    }
+    if (!hasNumber.test(password)) {
+      return "Password must contain at least one number.";
+    }
+    if (!hasSpecialChar.test(password)) {
+      return "Password must contain at least one special character.";
+    }
+    return "";
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
+    setPasswordError("");
+
+    const passwordValidationError = validatePassword(formData.password);
+    if (passwordValidationError) {
+      setPasswordError(passwordValidationError);
+      setLoading(false);
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      setPasswordError("Passwords do not match.");
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await axios.post(
@@ -49,6 +82,17 @@ const Register = () => {
     }
   };
 
+  useEffect(() => {
+    if (error || passwordError) {
+      const timer = setTimeout(() => {
+        setError("");
+        setPasswordError("");
+      }, 5000); // Clear error messages after 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [error, passwordError]);
+
   return (
     <AuthLayout>
       <motion.div
@@ -60,14 +104,14 @@ const Register = () => {
         <h2 className="text-3xl font-bold text-center mb-6 text-blue-600">
           Register
         </h2>
-        {error && (
+        {(error || passwordError) && (
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             className="text-red-500 text-center mb-4"
           >
-            {error}
+            {error || passwordError}
           </motion.p>
         )}
         <form className="space-y-4" onSubmit={handleSubmit}>
@@ -121,6 +165,21 @@ const Register = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={formData.confirmPassword}
+              onChange={handleInputChange}
+              required
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
             <button
               type="submit"
               className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300"
@@ -157,7 +216,7 @@ const Register = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
           className="text-center mt-4"
         >
           Already have an account?{" "}

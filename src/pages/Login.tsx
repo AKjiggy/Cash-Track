@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../components/AuthLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 
@@ -22,10 +22,13 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!formData.email || !formData.password) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
     setLoading(true);
     setError("");
-
-    // console.log("Login Request Data:", formData); // Debugging
 
     try {
       const response = await axios.post(
@@ -38,7 +41,6 @@ const Login = () => {
         }
       );
 
-      // console.log("Login successful! Token:", response.data.token);
       localStorage.setItem("token", response.data.token);
       navigate("/dashboard");
     } catch (err) {
@@ -51,6 +53,16 @@ const Login = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => {
+        setError("");
+      }, 5000); // Clear error messages after 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
 
   return (
     <AuthLayout>
