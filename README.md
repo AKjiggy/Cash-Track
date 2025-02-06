@@ -1,11 +1,13 @@
-# Finance App
+# Cash Track
 
-A personal finance management application to help users track income, expenses, and budgets while visualizing financial trends.
+A personal finance management application designed to help users track income, expenses, and budgets while visualizing financial trends.
 
 ## Features
 
-- **Onboarding**: Simple and intuitive tutorial for new users.
-- **Authentication**: Login, registration, and password recovery.
+### Core Features
+
+- **Onboarding**: Guided introduction for new users.
+- **Authentication**: Secure login, registration, and password recovery.
 - **Dashboard**:
   - Track income and expenses.
   - View balance calculations.
@@ -27,9 +29,9 @@ A personal finance management application to help users track income, expenses, 
 ### Backend
 
 - **Node.js**: JavaScript runtime.
-- **Express**: Web framework for building APIs.
+- **Express**: Web framework for APIs.
 - **MongoDB**: NoSQL database.
-- **Mongoose**: Object Data Modeling (ODM) library for MongoDB.
+- **Mongoose**: ODM library for MongoDB.
 
 ## Project Setup
 
@@ -41,14 +43,14 @@ A personal finance management application to help users track income, expenses, 
 
 ### Getting Started
 
-#### 1. Clone the repository
+#### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
-cd finance-app
+cd cash-track
 ```
 
-#### 2. Install dependencies
+#### 2. Install Dependencies
 
 ##### Frontend
 
@@ -68,7 +70,7 @@ npm install
 
 Create a `.env` file in the `server` directory and provide the following:
 
-```
+```env
 MONGO_URI=<your_mongodb_connection_string>
 PORT=5000
 ```
@@ -89,23 +91,59 @@ cd server
 npx nodemon server.js
 ```
 
-### Deployment
+## Deployment
 
-- **Frontend**: Deploy on [Vercel](https://vercel.com/).
-- **Backend**: Deploy on [Render](https://render.com/) or [Heroku](https://www.heroku.com/).
+- **Frontend**: Hosted on [Vercel](https://vercel.com/).
+- **Backend**: Hosted on [Render](https://render.com/) or [Heroku](https://www.heroku.com/).
 
-### Contributing
+## Project Information
 
-1. Fork the repository.
-2. Create a new branch for your feature (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m 'Add feature'`).
-4. Push to the branch (`git push origin feature-name`).
-5. Create a pull request.
+### Team Members
 
-### License
+- **Omojola Zion Olalekan** - LCU/UG/21/19103 (Computer Science)
+- **Adeyemi Ayomide Jesuloba** - LCU/UG/21/21106 (Computer Science)
+- **Madike Olisaemeka Valerian** - LCU/UG/21/20072 (Software Engineering)
+- **Abdulaziz Usama** - LCU/UG/21/21062 (Information Technology)
+- **Daniel Ameh Ochoga** - LCU/UG/21/20342 (Computer Science)
+- **Okanlawon Mariam Oyebola** - LCU/UG/22/24404 (Computer Science)
+- **Aleilo Muhsin Olamide** - LCU/UG/21/19854 (Computer Science)
+- **Okanlawon Mariam Oyebola** - LCU/UG/22/24404 (Computer Science)
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+### Course Information
+
+- **Course Code**: GST 306
+- **Project Title**: Cash Track - Personal Finance Tracker
+
+## Contribution Guidelines
+
+1. Fork the repository and create a new branch for your feature:
+
+```bash
+git checkout -b feature-name
+```
+
+2. Commit your changes:
+
+```bash
+git commit -m "Add feature"
+```
+
+3. Push to the branch:
+
+```bash
+git push origin feature-name
+```
+
+4. Create a pull request for review.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+Special thanks to our lecturer for the project guidelines and to our team for their dedication and effort.
 
 ---
 
-Happy coding! 🚀
+Built with ❤️ by the Cash Track team.
