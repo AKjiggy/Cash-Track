@@ -97,7 +97,6 @@ const Dashboard = () => {
     fetchUserData();
   }, [navigate]);
 
-  // Calculate balance
   useEffect(() => {
     const newBalance = transactions.reduce((acc, transaction) => {
       return transaction.type === "income"
