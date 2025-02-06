@@ -1,50 +1,111 @@
-# React + TypeScript + Vite
+# Finance App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal finance management application to help users track income, expenses, and budgets while visualizing financial trends.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Onboarding**: Simple and intuitive tutorial for new users.
+- **Authentication**: Login, registration, and password recovery.
+- **Dashboard**:
+  - Track income and expenses.
+  - View balance calculations.
+  - Manage transactions (add, edit, delete).
+- **Advanced Features**:
+  - Set monthly budgets for categories.
+  - Define and track savings goals.
+  - Visualize spending trends using charts and graphs.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Frontend
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: For building the user interface.
+- **TypeScript**: Ensures type safety.
+- **Vite**: Fast build tool.
+- **Tailwind CSS**: For styling.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Backend
+
+- **Node.js**: JavaScript runtime.
+- **Express**: Web framework for building APIs.
+- **MongoDB**: NoSQL database.
+- **Mongoose**: Object Data Modeling (ODM) library for MongoDB.
+
+## Project Setup
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+- MongoDB instance
+
+### Getting Started
+
+#### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd finance-app
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+#### 2. Install dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+##### Frontend
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd client
+npm install
 ```
+
+##### Backend
+
+```bash
+cd server
+npm install
+```
+
+#### 3. Configure Environment Variables
+
+Create a `.env` file in the `server` directory and provide the following:
+
+```
+MONGO_URI=<your_mongodb_connection_string>
+PORT=5000
+```
+
+#### 4. Run the Application
+
+##### Frontend
+
+```bash
+cd client
+npm run dev
+```
+
+##### Backend
+
+```bash
+cd server
+npx nodemon server.js
+```
+
+### Deployment
+
+- **Frontend**: Deploy on [Vercel](https://vercel.com/).
+- **Backend**: Deploy on [Render](https://render.com/) or [Heroku](https://www.heroku.com/).
+
+### Contributing
+
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Create a pull request.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+Happy coding! 🚀
