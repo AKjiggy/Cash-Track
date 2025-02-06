@@ -167,7 +167,7 @@ const Dashboard = () => {
           </h1>
           <div className="flex items-center gap-4">
             <div className="bg-blue-500 px-4 py-2 rounded-lg">
-              Balance: ${balance.toFixed(2)}
+              Balance: ₦{balance.toFixed(2)}
             </div>
             <button
               onClick={() => {
@@ -364,7 +364,7 @@ const Dashboard = () => {
                           : "text-red-600"
                       }`}
                     >
-                      ${transaction.amount.toFixed(2)}
+                      ₦{transaction.amount.toFixed(2)}
                     </span>
                     <button
                       onClick={() => handleDeleteTransaction(transaction.id)}
