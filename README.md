@@ -103,10 +103,10 @@ npx nodemon server.js
 - **ADEYEMO MUBARAK ADEMOLA** - LCU/UG/21/19403 (Computer Science)
 - **Ojeniyi Adebayo Samuel** - LCU/UG/21/20753 (Computer Science)
 - **Madu Brandon** - LCU/UG/22/24049 (Information Technology)
-- **Abdulaziz Usama** - LCU/UG/21/21062 (Information Technology)
-- **Daniel Ameh Ochoga** - LCU/UG/21/20342 (Computer Science)
-- **Okanlawon Mariam Oyebola** - LCU/UG/22/24404 (Computer Science)
-- **Aleilo Muhsin Olamide** - LCU/UG/21/19854 (Computer Science)
+- **Flora Ogedengbe** - LCU/UG/22/22707 (Information Technology)
+- **Alimi Aleem Babatunde** - LCU/UG/22/22126 (Computer Science)
+- **Okunola Oluwaseun Emmanuel** - LCU/UG/22/21485 (Computer Science)
+- **Odediran Israel Obadare** - LCU/UG/20/17881 (Software Engineering)
 - **Okanlawon Mariam Oyebola** - LCU/UG/22/24404 (Computer Science)
 
 ### Course Information

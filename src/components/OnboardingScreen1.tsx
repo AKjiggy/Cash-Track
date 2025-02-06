@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const OnboardingScreen1 = ({ onNext }: { onNext: () => void }) => {
   const groupMembers = [
-    "John Doe",
-    "Jane Smith",
-    "Alice Johnson",
-    "Bob Brown",
-    "Charlie Davis",
-    "Eve White",
-    "Frank Wilson",
-    "Grace Lee",
+    "Adeyemo Mubarak Ademola",
+    "Odediran Israel Obadare",
+    "Alimi Aleem Babatunde",
+    "Opeloyeru Abdussobur Ayinde",
+    "Madu Brandon",
+    "Ojeniyi Adebayo Samuel",
+    "Flora Ogedengbe",
+    "Okunola Oluwaseun Emmanuel",
     "Henry Martinez",
     "Ivy Garcia",
   ];
@@ -29,7 +29,7 @@ const OnboardingScreen1 = ({ onNext }: { onNext: () => void }) => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-4xl font-bold mb-4 text-center"
       >
-        Finance App Team
+        Group B
       </motion.h1>
 
       {/* Project Name */}
@@ -49,7 +49,7 @@ const OnboardingScreen1 = ({ onNext }: { onNext: () => void }) => {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="text-lg mb-8 text-center"
       >
-        Course Code: CS101 - Project Name: Finance App
+        Course Code: GST 306 <br /> Project Name: Cash Track
       </motion.p>
 
       {/* Group Members */}
