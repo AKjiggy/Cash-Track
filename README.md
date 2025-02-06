@@ -94,7 +94,7 @@ npx nodemon server.js
 ## Deployment
 
 - **Frontend**: Hosted on [Vercel](https://vercel.com/).
-- **Backend**: Hosted on [Render](https://render.com/) or [Heroku](https://www.heroku.com/).
+- **Backend**: Hosted on [Vercel](https://vercel.com/).
 
 ## Project Information
 
