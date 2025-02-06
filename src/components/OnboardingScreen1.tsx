@@ -6,7 +6,6 @@ const OnboardingScreen1 = ({ onNext }: { onNext: () => void }) => {
     "Adeyemo Mubarak Ademola",
     "Odediran Israel Obadare",
     "Alimi Aleem Babatunde",
-    "Opeloyeru Abdussobur Ayinde",
     "Madu Brandon",
     "Ojeniyi Adebayo Samuel",
     "Flora Ogedengbe",
