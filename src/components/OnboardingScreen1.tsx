@@ -11,8 +11,9 @@ const OnboardingScreen1 = ({ onNext }: { onNext: () => void }) => {
     "Ojeniyi Adebayo Samuel",
     "Flora Ogedengbe",
     "Okunola Oluwaseun Emmanuel",
-    "Henry Martinez",
-    "Ivy Garcia",
+    "Talabi Temiloluwa Stephen",
+    "Dauda Adisa Azeez",
+    "Opeloyeru Abdussobur Ayinde",
   ];
 
   return (

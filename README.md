@@ -107,7 +107,9 @@ npx nodemon server.js
 - **Alimi Aleem Babatunde** - LCU/UG/22/22126 (Computer Science)
 - **Okunola Oluwaseun Emmanuel** - LCU/UG/22/21485 (Computer Science)
 - **Odediran Israel Obadare** - LCU/UG/20/17881 (Software Engineering)
-- **Okanlawon Mariam Oyebola** - LCU/UG/22/24404 (Computer Science)
+- **Talabi Temiloluwa Stephen** - LCU/UG/21/20907 (Software Engineering)
+- **Dauda Adisa Azeez** - LCU/UG/21/20276 (Computer Science)
+- **Opeloyeru Abdussobur Ayinde** - LCU/UG/22/22966 (Computer Science)
 
 ### Course Information
 
