@@ -13,6 +13,7 @@ const OnboardingScreen1 = ({ onNext }: { onNext: () => void }) => {
     "Talabi Temiloluwa Stephen",
     "Dauda Adisa Azeez",
     "Opeloyeru Abdussobur Ayinde",
+    "Abdullahi Abdulmajid",
   ];
 
   return (

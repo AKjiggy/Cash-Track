@@ -110,6 +110,7 @@ npx nodemon server.js
 - **Talabi Temiloluwa Stephen** - LCU/UG/21/20907 (Software Engineering)
 - **Dauda Adisa Azeez** - LCU/UG/21/20276 (Computer Science)
 - **Opeloyeru Abdussobur Ayinde** - LCU/UG/22/22966 (Computer Science)
+- **Abdullahi Abdulmajid** - LCU/UG/21/20966 (Information Technology)
 
 ### Course Information
 
